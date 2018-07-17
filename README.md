@@ -4,9 +4,9 @@
 ### python3 -m pip install -r requirements.txt
 
 
-## Route Main  /api
 
-## # /api/user/
+
+## Route /api/user/
     GET /api/user  
       -- show all Posts 
       ++ json(data[{'post':'','title':'','keys':'','date':''},...])
@@ -19,7 +19,7 @@
                 + email 
                 + comment < text >
       
-## # /api/admin /
+## Route /api/admin /
     ** headers {'username','password'}
     GET /api/admin/  
       -- show all Posts 
