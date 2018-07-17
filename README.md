@@ -12,7 +12,7 @@
       ++ json(data[{'post':'','title':'','keys':'','date':''},...])
     GET /api/user/<ID>
       -- show post with Comment by id 
-      ++ json({'post':'','title':'','keys':'','date':''})
+      ++ json('post':{'post':'','title':'','keys':'','date':''},'command':{'email':'','commadn':''})
     POST /api/user/<ID>
       -- add Comment To post 
       -- Data :
@@ -23,8 +23,10 @@
     ** headers {'username','password'}
     GET /api/admin/  
       -- show all Posts 
+      ++ json(data[{'post':'','title':'','keys':'','date':''},...])
     GET /api/admin/<ID>
       -- show post with Comment by id 
+      ++ json('post':{'post':'','title':'','keys':'','date':''},'command':{'email':'','commadn':''})
     POST /api/admin/
         -- add new Post 
         -- Data :
@@ -34,7 +36,10 @@
     put /api/admin/<id> 
          -- edit post by id 
          -- data : 
-                   + title | post | keys
+                   + title OR post OR keys
+    delete /api/admin/<id>
+        -- delete post by id 
+        
                
   
       
